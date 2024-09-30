@@ -1,4 +1,4 @@
-all: 
+all: test/primitives
 
 primitives_info: primitives_info_build
 	./primitives_info
@@ -7,15 +7,21 @@ primitives_info_build: primitives_info.c
 	@echo "Building primitives_info.c"
 	gcc primitives_info.c -o primitives_info
 
-test/test_hello_world: test/test_hello_world.c test/unity/unity.c
+test/primitives: test/primitives.c test/unity/unity.c primitives.o
 	@echo "Building tests."
-	gcc test/test_hello_world.c test/unity/unity.c -o test/test_hello_world
+	gcc primitives.o test/primitives.c test/unity/unity.c  -o test/primitives
+
+primitives.o: primitives.c primitives.h
+	@echo "Building primitives.c"
+	gcc -c primitives.c -o primitives.o
 
 clean:
-	@if test -f primitives_info; then rm primitives_info; fi
+	rm -f primitives_info
+	rm -f test/primitives
+	rm -f primitives.o
 
 run: hello_world
 	./hello_world
 
 test: all
-	./test/test_hello_world
+	./test/primitives
