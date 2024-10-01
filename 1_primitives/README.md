@@ -25,7 +25,15 @@ printf("world");
 */
 ```
 
-## Function Returns
+## Function
+
+A function lets you encapsulate a block of code an lets you define paramerters as your input and also an output or the return.
+
+In the example below the two parameters are `a` and `b`. You may define multiple paramerts or no parameter represented with an empty set of parentheses.
+
+```
+int function() {}
+```
 
 A function return in C is the value that a function gives back to the part of the program that called it. The return type of a function is specified in the function's declaration and definition. For example, a function that returns an integer would be declared with the `int` return type.
 
@@ -38,8 +46,6 @@ int add(int a, int b) {
 ```
 
 In this example, the `add` function takes two integer parameters and returns their sum. The `return` statement is used to specify the value to be returned to the caller. The `return` statement directly calculates and returns the product of `a` and `b`.
-
-TODO: add link to functions for later section.
 
 ## Primitive Data Types
 

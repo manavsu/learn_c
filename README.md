@@ -1,6 +1,8 @@
 # C
 
-There are a set of modules, use the `README.md` of each to get an idea of what you'll need to know to complete the module as well as what files to edit. \
+Created in order to help myself and others learn C.
+
+There are a set of modules, use the `README.md` of each to get an idea of what you'll need to know to complete the module as well as what files to edit.
 
 Use `make test` to run tests, make them all pass to complete the module.
 
