@@ -1,7 +1,11 @@
+#include <stdbool.h>
+
 #ifndef CONDITIONALS_H
 #define CONDITIONALS_H
 
-int abs(int a);
+bool is_even(int a);
+
+int get_abs(int a);
 
 int max(int a, int b);
 

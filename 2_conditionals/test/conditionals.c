@@ -5,10 +5,20 @@ void setUp(void) {}
 
 void tearDown(void) {}
 
-void test_abs() {
-    TEST_ASSERT_EQUAL(5, abs(5));
-    TEST_ASSERT_EQUAL(5, abs(-5));
-    TEST_ASSERT_EQUAL(0, abs(0));
+void test_is_even() {
+    TEST_ASSERT_TRUE(is_even(2));
+    TEST_ASSERT_TRUE(is_even(0));
+    TEST_ASSERT_FALSE(is_even(1));
+    TEST_ASSERT_FALSE(is_even(-1));
+    TEST_ASSERT_TRUE(is_even(-2));
+    TEST_ASSERT_FALSE(is_even(-3003));
+}
+
+void test_get_abs() {
+    TEST_ASSERT_EQUAL(5, get_abs(5));
+    TEST_ASSERT_EQUAL(5, get_abs(-5));
+    TEST_ASSERT_EQUAL(0, get_abs(0));
+    TEST_ASSERT_EQUAL(10, get_abs(-10));
 }
 
 void test_max() {
@@ -38,7 +48,8 @@ int main(int argc, char *argv[])
     printf("-----------------------\n\n");
     UNITY_BEGIN();
 
-    RUN_TEST(test_abs);
+    RUN_TEST(test_is_even);
+    RUN_TEST(test_get_abs);
     RUN_TEST(test_max);
     RUN_TEST(test_min);
     RUN_TEST(test_calculate_letter_grade);
