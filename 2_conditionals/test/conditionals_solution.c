@@ -5,22 +5,28 @@
 
 // Check if a is even. Return true if it is, false otherwise
 bool is_even(int a) {
-    return NULL; // TODO
+    return a % 2 == 0;
 }
 
 // Return the absolute value of a
 int abs(int a) {
-    return NULL; // TODO
+    return a < 0 ? -a : a;
 }
 
 // Return the maximum of a and b
 int max(int a, int b) {
-    return NULL; // TODO
+    return a > b ? a : b;
 }
 
 // Return the minimum of a, b and c
 int min(int a, int b, int c) {
-    return NULL; // TODO
+    if (a < b && a < c) {
+        return a;
+    } else if (b < a && b < c) {
+        return b;
+    } else {
+        return c;
+    } 
 }
 
 // Return the letter grade for the given score
@@ -30,5 +36,15 @@ int min(int a, int b, int c) {
 // 60-69: D
 // 0-59: F
 char calculate_letter_grade(int score) {
-    return NULL; // TODO
+    if (score >= 90) {
+        return 'A';
+    } else if (score >= 80) {
+        return 'B';
+    } else if (score >= 70) {
+        return 'C';
+    } else if (score >= 60) {
+        return 'D';
+    } else {
+        return 'F';
+    }
 }
