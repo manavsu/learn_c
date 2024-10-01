@@ -28,5 +28,3 @@ Use `make test` to run tests, make them all pass to complete the module.
 * Ternary Operator
 * Comparisions
 * Logical Operators
-
-### More coming soon ....
